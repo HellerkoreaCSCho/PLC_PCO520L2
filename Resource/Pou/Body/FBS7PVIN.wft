@@ -1,0 +1,22 @@
+FUNCTION_BLOCK FBS7PVIN (*Samwon SP790  PV Read*)
+ VAR_INPUT
+  Execute:BOOL:;
+  Mode:INT:;
+ END_VAR
+ VAR_OUTPUT
+  Result1:INT:;
+  ActionBit:BOOL:;
+  FaultBit:BOOL:;
+ END_VAR
+ VAR
+  intarray:INT(20):;
+  index:INT:;
+  str_inValue:STRING(4):;
+ END_VAR
+ VAR_SYSTEM
+  __SLP00000:POINTER:;
+  __SLP00001:POINTER:;
+  __SLP00002:POINTER:;
+  __SLP00003:POINTER:;
+ END_VAR
+END_FUNCTION_BLOCK

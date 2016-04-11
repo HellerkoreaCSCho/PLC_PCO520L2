@@ -1,0 +1,221 @@
+PROGRAM SP790_RS (*RS485 Communication Modbus RTU*)
+ VAR
+  FB1:FB_FBC24PAR:;
+   STRUCT
+    VAR_INPUT
+     iModuleReady AT M8186:BOOL:;
+     iModule_IO_No AT D12208:INT:;
+     iChanel_No AT D12207:INT:;
+     iWord_ByteSelect AT D12206:INT:;
+     iReciveEndCode AT D12205:INT:;
+     iReciveEndCount AT D12204:INT:;
+    END_VAR
+    VAR_OUTPUT
+     oWord_ByteSelect AT D12203:INT:;
+     oReciveEndCode AT D12202:INT:;
+     oReciveEndCount AT D12201:INT:;
+    END_VAR
+    VAR
+     BufferNumber AT D12200:INT:;
+    END_VAR
+   END_STRUCT
+  FB3:FB_FBS7POT2:;
+   STRUCT
+    VAR_INPUT
+     Mode AT D12199:INT:;
+     ModuleCh_No AT D12198:INT:;
+    END_VAR
+    VAR_OUTPUT
+     Send1 AT D12197:INT:;
+     Send2 AT D12196:INT:;
+     Send3 AT D12195:INT:;
+     Send4 AT D12194:INT:;
+     Execute AT M8185:BOOL:;
+    END_VAR
+    VAR
+     send_swap AT D12193:INT:;
+     send_wtob AT D12187:INT(6):;
+     CRC_16 AT D12186:INT:;
+     value_MOD AT D12185:INT:;
+     moduleCh_No AT D12184:INT:;
+     ChannelNoASCII AT D12183:INT:;
+     index AT D12182:INT:;
+     index1 AT D12181:INT:;
+     __SLP00000 AT P0:POINTER:;
+     __SLP00001 AT P1:POINTER:;
+     __SLP00002 AT P2:POINTER:;
+     __SLP00003 AT P3:POINTER:;
+     __SLP00004 AT P4:POINTER:;
+     __SLP00005 AT P5:POINTER:;
+     __SLP00006 AT P6:POINTER:;
+     __SLP00007 AT P7:POINTER:;
+     __SLP00008 AT P8:POINTER:;
+     __SLP00009 AT P9:POINTER:;
+     __SLP00010 AT P10:POINTER:;
+     __SLP00011 AT P11:POINTER:;
+     __SLP00012 AT P12:POINTER:;
+     __SLP00013 AT P13:POINTER:;
+     __SLP00014 AT P14:POINTER:;
+     __SLP00015 AT P15:POINTER:;
+     __SLP00016 AT P16:POINTER:;
+     __SLP00017 AT P17:POINTER:;
+     __SLW000000 AT D12179:INT(2):;
+     __SLW000002 AT D12178:INT:;
+     __SLW000003 AT D12176:INT(2):;
+    END_VAR
+   END_STRUCT
+  FB2:FB_FBS7PVIN:;
+   STRUCT
+    VAR_INPUT
+     Execute AT M8184:BOOL:;
+     Mode AT D12175:INT:;
+    END_VAR
+    VAR_OUTPUT
+     Result1 AT D12174:INT:;
+     ActionBit AT M8183:BOOL:;
+     FaultBit AT M8182:BOOL:;
+    END_VAR
+    VAR
+     intarray AT D12154:INT(20):;
+     index AT D12153:INT:;
+     str_inValue AT D12150:STRING(4):;
+     __SLP00000 AT P18:POINTER:;
+     __SLP00001 AT P19:POINTER:;
+     __SLP00002 AT P20:POINTER:;
+     __SLP00003 AT P21:POINTER:;
+    END_VAR
+   END_STRUCT
+  FB4:FB_FBS7POT1:;
+   STRUCT
+    VAR_INPUT
+     Mode AT D12149:INT:;
+     ModuleCh_No AT D12148:INT:;
+     In_Seg_No_Value AT D12147:INT:;
+     In_TSP_1010 AT D12146:INT:;
+     In_SEG_T_1011 AT D12145:INT:;
+     In_TS1_1012 AT D12144:INT:;
+     In_TS2_1013 AT D12143:INT:;
+     In_TS3_1014 AT D12142:INT:;
+     In_TS4_1015 AT D12141:INT:;
+     In_TS5_1016 AT D12140:INT:;
+     In_PID_Number AT D12139:INT:;
+    END_VAR
+    VAR_OUTPUT
+     Send1 AT D12138:INT:;
+     Send2 AT D12137:INT:;
+     Send3 AT D12136:INT:;
+     Send4 AT D12135:INT:;
+     Send5 AT D12134:INT:;
+     Send6 AT D12133:INT:;
+     Send7 AT D12132:INT:;
+     Send8 AT D12131:INT:;
+     Send9 AT D12130:INT:;
+     Send10 AT D12129:INT:;
+     Send11 AT D12128:INT:;
+     Send12 AT D12127:INT:;
+     CRC_count AT D12126:INT:;
+    END_VAR
+    VAR
+     send_swap AT D12125:INT:;
+     send_wtob AT D12103:INT(22):;
+     data_wtob AT D12101:INT(2):;
+     CRC_16 AT D12100:INT:;
+     value_MOD AT D12099:INT:;
+     moduleCh_No AT D12098:INT:;
+     ChannelNoASCII AT D12097:INT:;
+     index AT D12096:INT:;
+     index1 AT D12095:INT:;
+    END_VAR
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    VAR
+     __SLP00000 AT P22:POINTER:;
+     __SLP00001 AT P23:POINTER:;
+     __SLP00002 AT P24:POINTER:;
+     __SLP00003 AT P25:POINTER:;
+     __SLP00004 AT P26:POINTER:;
+     __SLP00005 AT P27:POINTER:;
+     __SLP00006 AT P28:POINTER:;
+     __SLP00007 AT P29:POINTER:;
+     __SLP00008 AT P30:POINTER:;
+     __SLP00009 AT P31:POINTER:;
+     __SLP00010 AT P32:POINTER:;
+     __SLP00011 AT P33:POINTER:;
+     __SLP00012 AT P34:POINTER:;
+     __SLP00013 AT P35:POINTER:;
+     __SLP00014 AT P36:POINTER:;
+     __SLP00015 AT P37:POINTER:;
+     __SLP00016 AT P38:POINTER:;
+     __SLP00017 AT P39:POINTER:;
+     __SLP00018 AT P40:POINTER:;
+     __SLW000000 AT D12093:INT(2):;
+     __SLW000002 AT D12092:INT:;
+    END_VAR
+   END_STRUCT
+  FB5:FB_FBS7POT3:;
+   STRUCT
+    VAR_INPUT
+     Mode AT D12091:INT:;
+     ModuleCh_No AT D12090:INT:;
+     In_P_value AT D12089:INT:;
+     In_I_value AT D12088:INT:;
+     In_D_value AT D12087:INT:;
+    END_VAR
+    VAR_OUTPUT
+     Send1 AT D12086:INT:;
+     Send2 AT D12085:INT:;
+     Send3 AT D12084:INT:;
+     Send4 AT D12083:INT:;
+     Send5 AT D12082:INT:;
+     Send6 AT D12081:INT:;
+     Send7 AT D12080:INT:;
+     Send8 AT D12079:INT:;
+     CRC_count AT D12078:INT:;
+    END_VAR
+    VAR
+     send_swap AT D12077:INT:;
+     send_wtob AT D12055:INT(22):;
+     data_wtob AT D12053:INT(2):;
+     CRC_16 AT D12052:INT:;
+     value_MOD AT D12051:INT:;
+     moduleCh_No AT D12050:INT:;
+     ChannelNoASCII AT D12049:INT:;
+     index AT D12048:INT:;
+     index1 AT D12047:INT:;
+    END_VAR
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    @'':@'';;
+    VAR
+     __SLP00000 AT P41:POINTER:;
+     __SLP00001 AT P42:POINTER:;
+     __SLP00002 AT P43:POINTER:;
+     __SLP00003 AT P44:POINTER:;
+     __SLP00004 AT P45:POINTER:;
+     __SLP00005 AT P46:POINTER:;
+     __SLP00006 AT P47:POINTER:;
+     __SLP00007 AT P48:POINTER:;
+     __SLP00008 AT P49:POINTER:;
+     __SLP00009 AT P50:POINTER:;
+     __SLP00010 AT P51:POINTER:;
+     __SLP00011 AT P52:POINTER:;
+     __SLP00012 AT P53:POINTER:;
+     __SLP00013 AT P54:POINTER:;
+     __SLP00014 AT P55:POINTER:;
+     __SLP00015 AT P56:POINTER:;
+     __SLP00016 AT P57:POINTER:;
+     __SLW000000 AT D12045:INT(2):;
+     __SLW000002 AT D12044:INT:;
+    END_VAR
+   END_STRUCT
+ END_VAR
+END_PROGRAM

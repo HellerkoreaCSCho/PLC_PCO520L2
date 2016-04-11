@@ -1,0 +1,18 @@
+FUNCTION_BLOCK FBC24PAR (*QJ71C24 PARA Function Block*)
+ VAR_INPUT
+  iModuleReady:BOOL:;
+  iModule_IO_No:INT:;
+  iChanel_No:INT:;
+  iWord_ByteSelect:INT:;
+  iReciveEndCode:INT:;
+  iReciveEndCount:INT:;
+ END_VAR
+ VAR_OUTPUT
+  oWord_ByteSelect:INT:;
+  oReciveEndCode:INT:;
+  oReciveEndCount:INT:;
+ END_VAR
+ VAR
+  BufferNumber:INT:;
+ END_VAR
+END_FUNCTION_BLOCK

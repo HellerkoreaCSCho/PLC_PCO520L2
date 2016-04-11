@@ -1,0 +1,121 @@
+PROGRAM ST340_RS (*RS485 Communication_STX*)
+ VAR
+  FB1:FB_FBC24PAR:;
+   STRUCT
+    VAR_INPUT
+     iModuleReady AT M8191:BOOL:;
+     iModule_IO_No AT D12287:INT:;
+     iChanel_No AT D12286:INT:;
+     iWord_ByteSelect AT D12285:INT:;
+     iReciveEndCode AT D12284:INT:;
+     iReciveEndCount AT D12283:INT:;
+    END_VAR
+    VAR_OUTPUT
+     oWord_ByteSelect AT D12282:INT:;
+     oReciveEndCode AT D12281:INT:;
+     oReciveEndCount AT D12280:INT:;
+    END_VAR
+    VAR
+     BufferNumber AT D12279:INT:;
+    END_VAR
+   END_STRUCT
+  FB2:FB_FBS3PVOT:;
+   STRUCT
+    VAR_INPUT
+     Mode AT D12278:INT:;
+     ModuleCh_No AT D12277:INT:;
+    END_VAR
+    VAR_OUTPUT
+     Send1 AT D12276:INT:;
+     Send2 AT D12275:INT:;
+     Send3 AT D12273:STRING(2):;
+     Send4 AT D12271:STRING(2):;
+     Send5 AT D12269:STRING(2):;
+     Send6 AT D12267:STRING(2):;
+     Send7 AT D12265:STRING(2):;
+     Send8 AT D12264:INT:;
+    END_VAR
+    VAR
+     moduleCh_No AT D12263:INT:;
+     ChannelNoASCII AT D12262:INT:;
+     __SLP00000 AT P0:POINTER:;
+     __SLP00001 AT P1:POINTER:;
+     __SLP00002 AT P2:POINTER:;
+     __SLP00003 AT P3:POINTER:;
+     __SLP00004 AT P4:POINTER:;
+     __SLP00005 AT P5:POINTER:;
+     __SLP00006 AT P6:POINTER:;
+     __SLP00007 AT P7:POINTER:;
+     __SLP00008 AT P8:POINTER:;
+     __SLP00009 AT P9:POINTER:;
+    END_VAR
+   END_STRUCT
+  FB3:FB_FBS3PVIN:;
+   STRUCT
+    VAR_INPUT
+     Execute AT M8190:BOOL:;
+     Mode AT D12261:INT:;
+    END_VAR
+    VAR_OUTPUT
+     Result1 AT D12260:INT:;
+     Result2 AT D12259:INT:;
+     ActionBit AT M8189:BOOL:;
+    END_VAR
+    VAR
+     intarray AT D12239:INT(20):;
+     index AT D12238:INT:;
+     str_inValue AT D12235:STRING(4):;
+     __SLP00000 AT P10:POINTER:;
+     __SLP00001 AT P11:POINTER:;
+     __SLP00002 AT P12:POINTER:;
+     __SLP00003 AT P13:POINTER:;
+     __SLP00004 AT P14:POINTER:;
+     __SLP00005 AT P15:POINTER:;
+     __SLP00006 AT P16:POINTER:;
+     __SLP00007 AT P17:POINTER:;
+     __SLP00008 AT P18:POINTER:;
+     __SLB000000 AT M8188:BOOL:;
+     __SLB000001 AT M8187:BOOL:;
+    END_VAR
+   END_STRUCT
+  FB4:FB_FBS3SVOT:;
+   STRUCT
+    VAR_INPUT
+     Mode AT D12234:INT:;
+     ModuleCh_No AT D12233:INT:;
+     ASC_IN_1 AT D12232:INT:;
+     ASC_IN_2 AT D12231:INT:;
+    END_VAR
+    VAR_OUTPUT
+     Send1 AT D12230:INT:;
+     Send2 AT D12229:INT:;
+     Send3 AT D12227:STRING(2):;
+     Send4 AT D12225:STRING(2):;
+     Send5 AT D12223:STRING(2):;
+     Send6 AT D12221:STRING(2):;
+     Send7 AT D12219:STRING(2):;
+     Send8 AT D12218:INT:;
+     Send9 AT D12217:INT:;
+     Send10 AT D12216:INT:;
+     Send11 AT D12215:INT:;
+    END_VAR
+    @'':@'';;
+    @'':@'';;
+    VAR
+     Int_Array1 AT D12213:INT(2):;
+     Int_Array2 AT D12211:INT(2):;
+     moduleCh_No AT D12210:INT:;
+     ChannelNoASCII AT D12209:INT:;
+     __SLP00000 AT P19:POINTER:;
+     __SLP00001 AT P20:POINTER:;
+     __SLP00002 AT P21:POINTER:;
+     __SLP00003 AT P22:POINTER:;
+     __SLP00004 AT P23:POINTER:;
+     __SLP00005 AT P24:POINTER:;
+     __SLP00006 AT P25:POINTER:;
+     __SLP00007 AT P26:POINTER:;
+     __SLP00008 AT P27:POINTER:;
+    END_VAR
+   END_STRUCT
+ END_VAR
+END_PROGRAM
