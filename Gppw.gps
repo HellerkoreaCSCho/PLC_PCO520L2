@@ -24,7 +24,7 @@
 		lControl	TYPE_DWORD10	0
 		szAddr	TYPE_STRING	""
 		lCpuTimeOut	TYPE_DWORD10	4
-		lTimeOut	TYPE_DWORD10	5000
+		lTimeOut	TYPE_DWORD10	30000
 		lSumCheck	TYPE_DWORD10	1
 		lSrcNetNo	TYPE_DWORD10	1
 		lSrcStaNo	TYPE_DWORD10	1
@@ -68,14 +68,14 @@
 		NetNetwork	TYPE_DWORD10	0
 		NetStation	TYPE_DWORD10	0
 		NetStartIo	TYPE_DWORD16	0x0
-		TimeSelf	TYPE_DWORD10	5
+		TimeSelf	TYPE_DWORD10	30
 		NetKind2	TYPE_WORD16	0x201
 		Net2Network	TYPE_DWORD10	0
 		Net2Station	TYPE_DWORD10	0
 		Net2StartIo	TYPE_DWORD16	0x0
 		PcMode	TYPE_DWORD10	0
 		PortType	TYPE_DWORD10	1
-		CompProtocol	TYPE_DWORD10	0
+		CompProtocol	TYPE_DWORD10	1
 		PcE71PortType	TYPE_DWORD10	0
 		MacMode	TYPE_DWORD10	0
 		A6TELConv	TYPE_DWORD10	0
@@ -88,7 +88,7 @@
 		CompDataBit	TYPE_DWORD10	8
 		CompStopBit	TYPE_DWORD10	1
 		MultiCpuStatus	TYPE_DWORD10	1
-		MultiCpuNum	TYPE_DWORD10	0
+		MultiCpuNum	TYPE_DWORD10	1
 		RedundantCpuStatus	TYPE_DWORD10	0
 		RedundantCpuMode	TYPE_DWORD10	1023
 		RetryCount	TYPE_DWORD10	0
@@ -128,30 +128,30 @@
 [Gppw]
 	MainFrameWnd:
 		Maximize	TYPE_BOOL	FALSE
-		WindowLeft	TYPE_DWORD10	2162
-		WindowTop	TYPE_DWORD10	28
-		WindowRight	TYPE_DWORD10	3366
-		WindowBottom	TYPE_DWORD10	1059
+		WindowLeft	TYPE_DWORD10	67
+		WindowTop	TYPE_DWORD10	51
+		WindowRight	TYPE_DWORD10	1358
+		WindowBottom	TYPE_DWORD10	970
 		StatusBar	TYPE_BOOL	TRUE
 	BrowzerWnd:
 		BrowzerFloat	TYPE_BOOL	FALSE
-		WindowLeft	TYPE_DWORD10	2981
-		WindowTop	TYPE_DWORD10	262
-		WindowRight	TYPE_DWORD10	3358
-		WindowBottom	TYPE_DWORD10	657
+		WindowLeft	TYPE_DWORD10	1138
+		WindowTop	TYPE_DWORD10	195
+		WindowRight	TYPE_DWORD10	1350
+		WindowBottom	TYPE_DWORD10	870
 		BrowzerView	TYPE_BOOL	FALSE
 	ReferenceWnd:
 		RefWndFloat	TYPE_BOOL	FALSE
-		WindowLeft	TYPE_DWORD10	2170
-		WindowTop	TYPE_DWORD10	663
-		WindowRight	TYPE_DWORD10	3358
-		WindowBottom	TYPE_DWORD10	1032
+		WindowLeft	TYPE_DWORD10	75
+		WindowTop	TYPE_DWORD10	876
+		WindowRight	TYPE_DWORD10	1350
+		WindowBottom	TYPE_DWORD10	943
 		RefWndView	TYPE_BOOL	FALSE
 	ToolBarWnd:
 		UserSet	TYPE_BOOL	TRUE
 		MainDoc	TYPE_DWORD16	0xe81b
 		MainFloat	TYPE_BOOL	FALSE
-		MainWindowRect	TYPE_STRING	"878 ac a4a cc"
+		MainWindowRect	TYPE_STRING	"49 a5 21b c5"
 		MainToolBarView	TYPE_BOOL	TRUE
 		MainToolBarB0	TYPE_STRING	"1c 0 7d64 0 0 1"
 		MainToolBarB1	TYPE_STRING	"1c 1 7d65 0 1 1"
@@ -183,7 +183,7 @@
 		MainToolBarB27	TYPE_STRING	"1c 16 7e7c 0 11 1"
 		BrowzerDoc	TYPE_DWORD16	0xe81b
 		BrowzerFloat	TYPE_BOOL	FALSE
-		BrowzerWindowRect	TYPE_STRING	"878 e8 9be 108"
+		BrowzerWindowRect	TYPE_STRING	"30c 65 452 85"
 		BrowzerToolBarView	TYPE_BOOL	TRUE
 		BrowzerToolBarB0	TYPE_STRING	"6 0 4e66 1 78 1"
 		BrowzerToolBarB1	TYPE_STRING	"6 1 0 1 c 1"
@@ -193,7 +193,7 @@
 		BrowzerToolBarB5	TYPE_STRING	"6 5 7dad 0 1 1"
 		CirGPPADoc	TYPE_DWORD16	0xe81b
 		CirGPPAFloat	TYPE_BOOL	FALSE
-		CirGPPAWindowRect	TYPE_STRING	"878 6c af6 90"
+		CirGPPAWindowRect	TYPE_STRING	"4b 65 2c9 89"
 		CirGPPAToolBarView	TYPE_BOOL	TRUE
 		CirGPPAToolBarB0	TYPE_STRING	"1b 0 7e08 0 17 1"
 		CirGPPAToolBarB1	TYPE_STRING	"1b 1 7e09 0 18 1"
@@ -224,7 +224,7 @@
 		CirGPPAToolBarB26	TYPE_STRING	"1b 1a 7e25 0 2d 1"
 		ProgramDoc	TYPE_DWORD16	0xe81b
 		ProgramFloat	TYPE_BOOL	FALSE
-		ProgramWindowRect	TYPE_STRING	"87a 4e aa3 6e"
+		ProgramWindowRect	TYPE_STRING	"49 87 272 a7"
 		ProgramToolBarView	TYPE_BOOL	TRUE
 		ProgramToolBarB0	TYPE_STRING	"25 1d 7ead 0 13 1"
 		ProgramToolBarB1	TYPE_STRING	"25 1e 0 1 6 1"
@@ -265,14 +265,14 @@
 		ProgramToolBarB36	TYPE_STRING	"25 80000028 7e7f 0 0 1"
 		CommentDoc	TYPE_DWORD16	0xe81b
 		CommentFloat	TYPE_BOOL	FALSE
-		CommentWindowRect	TYPE_STRING	"87a 8e 8b8 ae"
+		CommentWindowRect	TYPE_STRING	"2d0 65 30e 85"
 		CommentToolBarView	TYPE_BOOL	TRUE
 		CommentToolBarB0	TYPE_STRING	"3 0 7e5e 0 0 1"
 		CommentToolBarB1	TYPE_STRING	"3 1 7e5f 0 1 1"
 		CommentToolBarB2	TYPE_STRING	"3 80000002 7e62 0 2 1"
 		DMemoryDoc	TYPE_DWORD16	0xe81b
 		DMemoryFloat	TYPE_BOOL	FALSE
-		DMemoryWindowRect	TYPE_STRING	"87a ca 8a1 ea"
+		DMemoryWindowRect	TYPE_STRING	"26d a5 294 c5"
 		DMemoryToolBarView	TYPE_BOOL	TRUE
 		DMemoryToolBarB0	TYPE_STRING	"7 80000002 7e7e 0 0 1"
 		DMemoryToolBarB1	TYPE_STRING	"7 80000003 7e7f 0 1 1"
@@ -283,7 +283,7 @@
 		DMemoryToolBarB6	TYPE_STRING	"7 0 7e72 0 3 1"
 		SFCDoc	TYPE_DWORD16	0xe81b
 		SFCFloat	TYPE_BOOL	TRUE
-		SFCWindowRect	TYPE_STRING	"83b 2bb9 8f8 2bd9"
+		SFCWindowRect	TYPE_STRING	"877 2ca9 934 2cc9"
 		SFCToolBarView	TYPE_BOOL	FALSE
 		SFCSToolBarB0	TYPE_STRING	"9 0 7ecb 0 0 1"
 		SFCSToolBarB1	TYPE_STRING	"9 1 7ecc 0 1 1"
@@ -296,7 +296,7 @@
 		SFCSToolBarB8	TYPE_STRING	"9 8 7eff 0 6 1"
 		SFCStepDoc	TYPE_DWORD16	0xe81b
 		SFCStepFloat	TYPE_BOOL	TRUE
-		SFCStepWindowRect	TYPE_STRING	"8d3 2baa b3f 2bce"
+		SFCStepWindowRect	TYPE_STRING	"90f 2c9a b7b 2cbe"
 		SFCStepToolBarView	TYPE_BOOL	FALSE
 		SFCStepToolBarB0	TYPE_STRING	"18 0 7ec1 0 0 1"
 		SFCStepToolBarB1	TYPE_STRING	"18 1 7ec2 0 1 1"
@@ -324,7 +324,7 @@
 		SFCStepToolBarB23	TYPE_STRING	"18 17 7f05 0 16 1"
 		STEditDoc	TYPE_DWORD16	0xe81b
 		STEditFloat	TYPE_BOOL	FALSE
-		STEditWindowRect	TYPE_STRING	"87a 4e 9b6 6e"
+		STEditWindowRect	TYPE_STRING	"4b 65 187 85"
 		STEditToolBarView	TYPE_BOOL	FALSE
 		STEditToolBarB0	TYPE_STRING	"10 0 7f63 0 0 1"
 		STEditToolBarB1	TYPE_STRING	"10 1 7f6a 0 1 1"
@@ -347,18 +347,18 @@
 		MajorVersion	TYPE_DWORD10	8
 		MinorVersion	TYPE_STRING	"114U"
 	Project:
-		ProjectPath	TYPE_STRING	"C:\Works\Project\PCO\trunk\4.PLC_Source\PCO520L#2"
-		ProjectName	TYPE_STRING	"PLC_PCO520-L_02_01_01_03212016"
+		ProjectPath	TYPE_STRING	"C:\Works\Project\PCO\trunk\4.PLC_Source\PCO520L2"
+		ProjectName	TYPE_STRING	"PLC_PCO520-L_02_01_02_06032016"
 		ProjectComment	TYPE_STRING	""
 		ChildWndStyle	TYPE_BOOL	TRUE
 		SortType	TYPE_DWORD10	1
 	SaveTime:
 		Year	TYPE_DWORD10	2016
-		Month	TYPE_DWORD10	3
-		Day	TYPE_DWORD10	24
+		Month	TYPE_DWORD10	6
+		Day	TYPE_DWORD10	3
 		Hour	TYPE_DWORD10	14
-		Minute	TYPE_DWORD10	11
-		Second	TYPE_DWORD10	49
+		Minute	TYPE_DWORD10	39
+		Second	TYPE_DWORD10	28
 [Prg]
 	PrgOptDlg:
 		EditBlock	TYPE_WORD10	0
@@ -1023,7 +1023,7 @@
 [Mon]
 	MonitorStatusDlg:
 		MonStatus	TYPE_BOOL	FALSE
-		DispStatus	TYPE_BOOL	FALSE
+		DispStatus	TYPE_BOOL	TRUE
 		FloatState	TYPE_BOOL	FALSE
 		WindowLeft	TYPE_DWORD10	0
 		WindowTop	TYPE_DWORD10	0
@@ -1155,16 +1155,16 @@
 		DeviceEntCnt	TYPE_WORD10	0
 [Cmnt]
 	SaveDevNameList:
-		SaveDevName000	TYPE_STRING	"Y40"
-		SaveDevName001	TYPE_STRING	"L2000"
-		SaveDevName002	TYPE_STRING	"D2650"
-		SaveDevName003	TYPE_STRING	"L1000"
-		SaveDevName004	TYPE_STRING	"L1400"
-		SaveDevName005	TYPE_STRING	"L1417"
-		SaveDevName006	TYPE_STRING	"M77"
-		SaveDevName007	TYPE_STRING	"D280"
-		SaveDevName008	TYPE_STRING	"L1428"
-		SaveDevName009	TYPE_STRING	"L1430"
+		SaveDevName000	TYPE_STRING	"L3119"
+		SaveDevName001	TYPE_STRING	"Y0"
+		SaveDevName002	TYPE_STRING	"D170"
+		SaveDevName003	TYPE_STRING	"D280"
+		SaveDevName004	TYPE_STRING	"L3138"
+		SaveDevName005	TYPE_STRING	"ZR69490"
+		SaveDevName006	TYPE_STRING	"ZR13990"
+		SaveDevName007	TYPE_STRING	"ZR10990"
+		SaveDevName008	TYPE_STRING	"L3118"
+		SaveDevName009	TYPE_STRING	"Y40"
 		SaveDevNameNo	TYPE_WORD10	10
 	SaveStrList:
 		SaveStrNo	TYPE_WORD10	0
@@ -1182,12 +1182,12 @@
 		DevmDataName	TYPE_STRING	""
 [Window]
 	Window000:
-		DataName	TYPE_STRING	"INPUT"
+		DataName	TYPE_STRING	"ALARM"
 		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	603
-		WindowBottom	TYPE_DWORD10	414
+		WindowLeft	TYPE_DWORD10	75
+		WindowTop	TYPE_DWORD10	75
+		WindowRight	TYPE_DWORD10	822
+		WindowBottom	TYPE_DWORD10	536
 		Maximize	TYPE_BOOL	TRUE
 		Minimize	TYPE_BOOL	FALSE
 		SplitWindow	TYPE_WORD10	1
@@ -1200,92 +1200,12 @@
 		FrameStat	TYPE_WORD10	0
 		StepNo	TYPE_DWORD10	-1
 		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	443
+		StepPosition	TYPE_DWORD10	2017
 		ViewX	TYPE_DWORD10	0
 		ViewY	TYPE_DWORD10	0
 		WindowOrgX	TYPE_DWORD10	0
 		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	3
-		CursorPositionY	TYPE_DWORD10	0
-		MonitorDispType	TYPE_DWORD10	0
-		DispLabelFlag	TYPE_BOOL	FALSE
-		DispLabelStyle	TYPE_BOOL	FALSE
-		DispCommentFlag	TYPE_BOOL	TRUE
-		DispCommentOptFlag	TYPE_BOOL	FALSE
-		DispNoteFlag	TYPE_BOOL	FALSE
-		DispStatementFlag	TYPE_BOOL	FALSE
-		DispPercent	TYPE_DWORD10	75
-		DispAutoSizeFlag	TYPE_BOOL	TRUE
-		DispMacroFlag	TYPE_BOOL	FALSE
-		DispSizeSpecify	TYPE_BOOL	FALSE
-		DispDevCommentLine	TYPE_DWORD10	4
-		DispLdrMonDevData	TYPE_BOOL	TRUE
-		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window001:
-		DataName	TYPE_STRING	"CONFIG"
-		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	607
-		WindowBottom	TYPE_DWORD10	472
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-		SplitWindow	TYPE_WORD10	1
-		SplitPercent	TYPE_WORD10	50
-		SplitView	TYPE_BOOL	FALSE
-		FBKind	TYPE_WORD10	0
-		InsFlag	TYPE_BOOL	FALSE
-		PrgMode	TYPE_WORD10	1
-		MonFlag	TYPE_BOOL	FALSE
-		FrameStat	TYPE_WORD10	1
-		StepNo	TYPE_DWORD10	-1
-		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	466
-		ViewX	TYPE_DWORD10	0
-		ViewY	TYPE_DWORD10	0
-		WindowOrgX	TYPE_DWORD10	0
-		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	2
-		CursorPositionY	TYPE_DWORD10	0
-		MonitorDispType	TYPE_DWORD10	0
-		DispLabelFlag	TYPE_BOOL	FALSE
-		DispLabelStyle	TYPE_BOOL	FALSE
-		DispCommentFlag	TYPE_BOOL	TRUE
-		DispCommentOptFlag	TYPE_BOOL	FALSE
-		DispNoteFlag	TYPE_BOOL	FALSE
-		DispStatementFlag	TYPE_BOOL	FALSE
-		DispPercent	TYPE_DWORD10	75
-		DispAutoSizeFlag	TYPE_BOOL	TRUE
-		DispMacroFlag	TYPE_BOOL	FALSE
-		DispSizeSpecify	TYPE_BOOL	FALSE
-		DispDevCommentLine	TYPE_DWORD10	4
-		DispLdrMonDevData	TYPE_BOOL	TRUE
-		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window002:
-		DataName	TYPE_STRING	"AT_DOAT"
-		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	607
-		WindowBottom	TYPE_DWORD10	418
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-		SplitWindow	TYPE_WORD10	1
-		SplitPercent	TYPE_WORD10	50
-		SplitView	TYPE_BOOL	FALSE
-		FBKind	TYPE_WORD10	0
-		InsFlag	TYPE_BOOL	FALSE
-		PrgMode	TYPE_WORD10	1
-		MonFlag	TYPE_BOOL	FALSE
-		FrameStat	TYPE_WORD10	1
-		StepNo	TYPE_DWORD10	-1
-		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	481
-		ViewX	TYPE_DWORD10	0
-		ViewY	TYPE_DWORD10	0
-		WindowOrgX	TYPE_DWORD10	0
-		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	3
+		CursorPositionX	TYPE_DWORD10	6
 		CursorPositionY	TYPE_DWORD10	3
 		MonitorDispType	TYPE_DWORD10	0
 		DispLabelFlag	TYPE_BOOL	FALSE
@@ -1301,13 +1221,50 @@
 		DispDevCommentLine	TYPE_DWORD10	4
 		DispLdrMonDevData	TYPE_BOOL	TRUE
 		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
+	Window001:
+		DataName	TYPE_STRING	"ALARM"
+		Title	TYPE_STRING	""
+		WindowType	TYPE_DWORD10	1298
+		WindowLeft	TYPE_DWORD10	100
+		WindowTop	TYPE_DWORD10	100
+		WindowRight	TYPE_DWORD10	847
+		WindowBottom	TYPE_DWORD10	561
+		Maximize	TYPE_BOOL	FALSE
+		Minimize	TYPE_BOOL	FALSE
+	Window002:
+		DataName	TYPE_STRING	"COMMENT"
+		WindowType	TYPE_DWORD10	769
+		WindowLeft	TYPE_DWORD10	50
+		WindowTop	TYPE_DWORD10	50
+		WindowRight	TYPE_DWORD10	907
+		WindowBottom	TYPE_DWORD10	499
+		Maximize	TYPE_BOOL	FALSE
+		Minimize	TYPE_BOOL	FALSE
 	Window003:
-		DataName	TYPE_STRING	"AT_AC"
+		DataName	TYPE_STRING	"Device batch monitor-1"
+		WindowType	TYPE_DWORD10	513
+		WindowLeft	TYPE_DWORD10	225
+		WindowTop	TYPE_DWORD10	225
+		WindowRight	TYPE_DWORD10	857
+		WindowBottom	TYPE_DWORD10	726
+		Maximize	TYPE_BOOL	FALSE
+		Minimize	TYPE_BOOL	FALSE
+		DevName	TYPE_STRING	"ZR69490"
+		MonType	TYPE_WORD10	0
+		DispType	TYPE_WORD10	0
+		NumType	TYPE_WORD10	0
+		DispZyun	TYPE_WORD10	1
+		Setten	TYPE_WORD10	0
+		PrgListName	TYPE_STRING	"ALARM"
+		MonStartFlg	TYPE_BOOL	FALSE
+		DispDevName	TYPE_STRING	""
+	Window004:
+		DataName	TYPE_STRING	"MAIN"
 		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	603
-		WindowBottom	TYPE_DWORD10	414
+		WindowLeft	TYPE_DWORD10	200
+		WindowTop	TYPE_DWORD10	200
+		WindowRight	TYPE_DWORD10	832
+		WindowBottom	TYPE_DWORD10	701
 		Maximize	TYPE_BOOL	FALSE
 		Minimize	TYPE_BOOL	FALSE
 		SplitWindow	TYPE_WORD10	1
@@ -1320,13 +1277,13 @@
 		FrameStat	TYPE_WORD10	1
 		StepNo	TYPE_DWORD10	-1
 		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	489
+		StepPosition	TYPE_DWORD10	740
 		ViewX	TYPE_DWORD10	0
 		ViewY	TYPE_DWORD10	0
 		WindowOrgX	TYPE_DWORD10	0
 		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	3
-		CursorPositionY	TYPE_DWORD10	0
+		CursorPositionX	TYPE_DWORD10	8
+		CursorPositionY	TYPE_DWORD10	1
 		MonitorDispType	TYPE_DWORD10	0
 		DispLabelFlag	TYPE_BOOL	FALSE
 		DispLabelStyle	TYPE_BOOL	FALSE
@@ -1341,13 +1298,80 @@
 		DispDevCommentLine	TYPE_DWORD10	4
 		DispLdrMonDevData	TYPE_BOOL	TRUE
 		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window004:
-		DataName	TYPE_STRING	"ALARM"
+	Window005:
+		DataName	TYPE_STRING	"FBS3PVIN"
+		WindowType	TYPE_DWORD10	289
+		WindowLeft	TYPE_DWORD10	25
+		WindowRight	TYPE_DWORD10	657
+		WindowTop	TYPE_DWORD10	25
+		WindowBottom	TYPE_DWORD10	526
+		Maximize	TYPE_BOOL	FALSE
+		Minimize	TYPE_BOOL	FALSE
+		CaretPosition	TYPE_DWORD10	271
+		InsertKeyState	TYPE_BOOL	TRUE
+		VScrollVarPosition	TYPE_DWORD10	0
+		SplitStyle	TYPE_DWORD10	0
+		FBKind	TYPE_WORD10	2
+		ActualProgram	TYPE_STRING	"ST340_RS"
+		ActualFB	TYPE_STRING	"FB3"
+		BookMarkLineNum	TYPE_WORD10	0
+	Window006:
+		DataName	TYPE_STRING	"ST340_RS"
 		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	603
-		WindowBottom	TYPE_DWORD10	414
+		WindowLeft	TYPE_DWORD10	125
+		WindowTop	TYPE_DWORD10	125
+		WindowRight	TYPE_DWORD10	792
+		WindowBottom	TYPE_DWORD10	626
+		Maximize	TYPE_BOOL	FALSE
+		Minimize	TYPE_BOOL	FALSE
+		SplitWindow	TYPE_WORD10	1
+		SplitPercent	TYPE_WORD10	50
+		SplitView	TYPE_BOOL	FALSE
+		FBKind	TYPE_WORD10	0
+		InsFlag	TYPE_BOOL	FALSE
+		PrgMode	TYPE_WORD10	2
+		MonFlag	TYPE_BOOL	FALSE
+		FrameStat	TYPE_WORD10	1
+		StepNo	TYPE_DWORD10	-1
+		BlockNo	TYPE_WORD10	65535
+		StepPosition	TYPE_DWORD10	263
+		ViewX	TYPE_DWORD10	0
+		ViewY	TYPE_DWORD10	0
+		WindowOrgX	TYPE_DWORD10	0
+		WindowOrgY	TYPE_DWORD10	0
+		CursorPositionX	TYPE_DWORD10	7
+		CursorPositionY	TYPE_DWORD10	3
+		MonitorDispType	TYPE_DWORD10	0
+		DispLabelFlag	TYPE_BOOL	FALSE
+		DispLabelStyle	TYPE_BOOL	FALSE
+		DispCommentFlag	TYPE_BOOL	TRUE
+		DispCommentOptFlag	TYPE_BOOL	FALSE
+		DispNoteFlag	TYPE_BOOL	FALSE
+		DispStatementFlag	TYPE_BOOL	FALSE
+		DispPercent	TYPE_DWORD10	75
+		DispAutoSizeFlag	TYPE_BOOL	TRUE
+		DispMacroFlag	TYPE_BOOL	FALSE
+		DispSizeSpecify	TYPE_BOOL	FALSE
+		DispDevCommentLine	TYPE_DWORD10	4
+		DispLdrMonDevData	TYPE_BOOL	TRUE
+		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
+	Window007:
+		DataName	TYPE_STRING	"ST340_RS"
+		Title	TYPE_STRING	"RS485 Communication_STX"
+		WindowType	TYPE_DWORD10	1298
+		WindowLeft	TYPE_DWORD10	250
+		WindowTop	TYPE_DWORD10	250
+		WindowRight	TYPE_DWORD10	882
+		WindowBottom	TYPE_DWORD10	751
+		Maximize	TYPE_BOOL	FALSE
+		Minimize	TYPE_BOOL	FALSE
+	Window008:
+		DataName	TYPE_STRING	"RECIPE"
+		WindowType	TYPE_DWORD10	257
+		WindowLeft	TYPE_DWORD10	50
+		WindowTop	TYPE_DWORD10	50
+		WindowRight	TYPE_DWORD10	942
+		WindowBottom	TYPE_DWORD10	375
 		Maximize	TYPE_BOOL	FALSE
 		Minimize	TYPE_BOOL	FALSE
 		SplitWindow	TYPE_WORD10	1
@@ -1360,7 +1384,7 @@
 		FrameStat	TYPE_WORD10	1
 		StepNo	TYPE_DWORD10	-1
 		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	1776
+		StepPosition	TYPE_DWORD10	67
 		ViewX	TYPE_DWORD10	0
 		ViewY	TYPE_DWORD10	0
 		WindowOrgX	TYPE_DWORD10	0
@@ -1381,266 +1405,17 @@
 		DispDevCommentLine	TYPE_DWORD10	4
 		DispLdrMonDevData	TYPE_BOOL	TRUE
 		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window005:
-		DataName	TYPE_STRING	"OUTPUT"
-		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	50
-		WindowTop	TYPE_DWORD10	50
-		WindowRight	TYPE_DWORD10	792
-		WindowBottom	TYPE_DWORD10	353
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-		SplitWindow	TYPE_WORD10	1
-		SplitPercent	TYPE_WORD10	50
-		SplitView	TYPE_BOOL	FALSE
-		FBKind	TYPE_WORD10	0
-		InsFlag	TYPE_BOOL	FALSE
-		PrgMode	TYPE_WORD10	1
-		MonFlag	TYPE_BOOL	FALSE
-		FrameStat	TYPE_WORD10	1
-		StepNo	TYPE_DWORD10	-1
-		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	801
-		ViewX	TYPE_DWORD10	0
-		ViewY	TYPE_DWORD10	0
-		WindowOrgX	TYPE_DWORD10	0
-		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	8
-		CursorPositionY	TYPE_DWORD10	1
-		MonitorDispType	TYPE_DWORD10	0
-		DispLabelFlag	TYPE_BOOL	FALSE
-		DispLabelStyle	TYPE_BOOL	FALSE
-		DispCommentFlag	TYPE_BOOL	TRUE
-		DispCommentOptFlag	TYPE_BOOL	FALSE
-		DispNoteFlag	TYPE_BOOL	FALSE
-		DispStatementFlag	TYPE_BOOL	FALSE
-		DispPercent	TYPE_DWORD10	75
-		DispAutoSizeFlag	TYPE_BOOL	TRUE
-		DispMacroFlag	TYPE_BOOL	FALSE
-		DispSizeSpecify	TYPE_BOOL	FALSE
-		DispDevCommentLine	TYPE_DWORD10	4
-		DispLdrMonDevData	TYPE_BOOL	TRUE
-		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window006:
-		DataName	TYPE_STRING	"MANUAL"
-		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	682
-		WindowBottom	TYPE_DWORD10	303
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-		SplitWindow	TYPE_WORD10	1
-		SplitPercent	TYPE_WORD10	50
-		SplitView	TYPE_BOOL	FALSE
-		FBKind	TYPE_WORD10	0
-		InsFlag	TYPE_BOOL	FALSE
-		PrgMode	TYPE_WORD10	1
-		MonFlag	TYPE_BOOL	FALSE
-		FrameStat	TYPE_WORD10	1
-		StepNo	TYPE_DWORD10	-1
-		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	486
-		ViewX	TYPE_DWORD10	0
-		ViewY	TYPE_DWORD10	0
-		WindowOrgX	TYPE_DWORD10	0
-		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	11
-		CursorPositionY	TYPE_DWORD10	0
-		MonitorDispType	TYPE_DWORD10	0
-		DispLabelFlag	TYPE_BOOL	FALSE
-		DispLabelStyle	TYPE_BOOL	FALSE
-		DispCommentFlag	TYPE_BOOL	TRUE
-		DispCommentOptFlag	TYPE_BOOL	FALSE
-		DispNoteFlag	TYPE_BOOL	FALSE
-		DispStatementFlag	TYPE_BOOL	FALSE
-		DispPercent	TYPE_DWORD10	75
-		DispAutoSizeFlag	TYPE_BOOL	TRUE
-		DispMacroFlag	TYPE_BOOL	FALSE
-		DispSizeSpecify	TYPE_BOOL	FALSE
-		DispDevCommentLine	TYPE_DWORD10	4
-		DispLdrMonDevData	TYPE_BOOL	TRUE
-		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window007:
-		DataName	TYPE_STRING	"MAIN"
-		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	603
-		WindowBottom	TYPE_DWORD10	414
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-		SplitWindow	TYPE_WORD10	1
-		SplitPercent	TYPE_WORD10	50
-		SplitView	TYPE_BOOL	FALSE
-		FBKind	TYPE_WORD10	0
-		InsFlag	TYPE_BOOL	FALSE
-		PrgMode	TYPE_WORD10	1
-		MonFlag	TYPE_BOOL	FALSE
-		FrameStat	TYPE_WORD10	1
-		StepNo	TYPE_DWORD10	-1
-		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	0
-		ViewX	TYPE_DWORD10	0
-		ViewY	TYPE_DWORD10	0
-		WindowOrgX	TYPE_DWORD10	0
-		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	12
-		CursorPositionY	TYPE_DWORD10	3
-		MonitorDispType	TYPE_DWORD10	0
-		DispLabelFlag	TYPE_BOOL	FALSE
-		DispLabelStyle	TYPE_BOOL	FALSE
-		DispCommentFlag	TYPE_BOOL	TRUE
-		DispCommentOptFlag	TYPE_BOOL	FALSE
-		DispNoteFlag	TYPE_BOOL	FALSE
-		DispStatementFlag	TYPE_BOOL	FALSE
-		DispPercent	TYPE_DWORD10	75
-		DispAutoSizeFlag	TYPE_BOOL	TRUE
-		DispMacroFlag	TYPE_BOOL	FALSE
-		DispSizeSpecify	TYPE_BOOL	FALSE
-		DispDevCommentLine	TYPE_DWORD10	4
-		DispLdrMonDevData	TYPE_BOOL	TRUE
-		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window008:
-		DataName	TYPE_STRING	"MAIN"
-		Title	TYPE_STRING	""
-		WindowType	TYPE_DWORD10	1298
-		WindowLeft	TYPE_DWORD10	50
-		WindowTop	TYPE_DWORD10	50
-		WindowRight	TYPE_DWORD10	657
-		WindowBottom	TYPE_DWORD10	468
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
 	Window009:
-		DataName	TYPE_STRING	"OUTPUT"
-		Title	TYPE_STRING	""
-		WindowType	TYPE_DWORD10	1298
-		WindowLeft	TYPE_DWORD10	100
-		WindowTop	TYPE_DWORD10	100
-		WindowRight	TYPE_DWORD10	842
-		WindowBottom	TYPE_DWORD10	403
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-	Window010:
-		DataName	TYPE_STRING	"INPUT"
+		DataName	TYPE_STRING	"RECIPE"
 		Title	TYPE_STRING	""
 		WindowType	TYPE_DWORD10	1298
 		WindowLeft	TYPE_DWORD10	25
 		WindowTop	TYPE_DWORD10	25
-		WindowRight	TYPE_DWORD10	632
-		WindowBottom	TYPE_DWORD10	443
+		WindowRight	TYPE_DWORD10	917
+		WindowBottom	TYPE_DWORD10	350
 		Maximize	TYPE_BOOL	FALSE
 		Minimize	TYPE_BOOL	FALSE
-	Window011:
-		DataName	TYPE_STRING	"COMMENT"
-		WindowType	TYPE_DWORD10	769
-		WindowLeft	TYPE_DWORD10	75
-		WindowTop	TYPE_DWORD10	75
-		WindowRight	TYPE_DWORD10	817
-		WindowBottom	TYPE_DWORD10	378
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-	Window012:
-		DataName	TYPE_STRING	"ALARM"
-		Title	TYPE_STRING	""
-		WindowType	TYPE_DWORD10	1298
-		WindowLeft	TYPE_DWORD10	75
-		WindowTop	TYPE_DWORD10	75
-		WindowRight	TYPE_DWORD10	682
-		WindowBottom	TYPE_DWORD10	493
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-	Window013:
-		DataName	TYPE_STRING	"AT_AC"
-		Title	TYPE_STRING	"Autoclave Auto Flow"
-		WindowType	TYPE_DWORD10	1298
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	607
-		WindowBottom	TYPE_DWORD10	418
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-	Window014:
-		DataName	TYPE_STRING	"RECIPE"
-		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	607
-		WindowBottom	TYPE_DWORD10	418
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-		SplitWindow	TYPE_WORD10	1
-		SplitPercent	TYPE_WORD10	50
-		SplitView	TYPE_BOOL	FALSE
-		FBKind	TYPE_WORD10	0
-		InsFlag	TYPE_BOOL	FALSE
-		PrgMode	TYPE_WORD10	2
-		MonFlag	TYPE_BOOL	FALSE
-		FrameStat	TYPE_WORD10	1
-		StepNo	TYPE_DWORD10	-1
-		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	218
-		ViewX	TYPE_DWORD10	0
-		ViewY	TYPE_DWORD10	0
-		WindowOrgX	TYPE_DWORD10	0
-		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	8
-		CursorPositionY	TYPE_DWORD10	4
-		MonitorDispType	TYPE_DWORD10	0
-		DispLabelFlag	TYPE_BOOL	FALSE
-		DispLabelStyle	TYPE_BOOL	FALSE
-		DispCommentFlag	TYPE_BOOL	TRUE
-		DispCommentOptFlag	TYPE_BOOL	FALSE
-		DispNoteFlag	TYPE_BOOL	FALSE
-		DispStatementFlag	TYPE_BOOL	FALSE
-		DispPercent	TYPE_DWORD10	75
-		DispAutoSizeFlag	TYPE_BOOL	TRUE
-		DispMacroFlag	TYPE_BOOL	FALSE
-		DispSizeSpecify	TYPE_BOOL	FALSE
-		DispDevCommentLine	TYPE_DWORD10	4
-		DispLdrMonDevData	TYPE_BOOL	TRUE
-		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window015:
-		DataName	TYPE_STRING	"ST340_RS"
-		WindowType	TYPE_DWORD10	257
-		WindowLeft	TYPE_DWORD10	0
-		WindowTop	TYPE_DWORD10	0
-		WindowRight	TYPE_DWORD10	737
-		WindowBottom	TYPE_DWORD10	409
-		Maximize	TYPE_BOOL	FALSE
-		Minimize	TYPE_BOOL	FALSE
-		SplitWindow	TYPE_WORD10	1
-		SplitPercent	TYPE_WORD10	56
-		SplitView	TYPE_BOOL	FALSE
-		FBKind	TYPE_WORD10	0
-		InsFlag	TYPE_BOOL	FALSE
-		PrgMode	TYPE_WORD10	1
-		MonFlag	TYPE_BOOL	FALSE
-		FrameStat	TYPE_WORD10	1
-		StepNo	TYPE_DWORD10	-1
-		BlockNo	TYPE_WORD10	65535
-		StepPosition	TYPE_DWORD10	846
-		ViewX	TYPE_DWORD10	0
-		ViewY	TYPE_DWORD10	0
-		WindowOrgX	TYPE_DWORD10	0
-		WindowOrgY	TYPE_DWORD10	0
-		CursorPositionX	TYPE_DWORD10	6
-		CursorPositionY	TYPE_DWORD10	3
-		MonitorDispType	TYPE_DWORD10	0
-		DispLabelFlag	TYPE_BOOL	FALSE
-		DispLabelStyle	TYPE_BOOL	FALSE
-		DispCommentFlag	TYPE_BOOL	TRUE
-		DispCommentOptFlag	TYPE_BOOL	FALSE
-		DispNoteFlag	TYPE_BOOL	TRUE
-		DispStatementFlag	TYPE_BOOL	TRUE
-		DispPercent	TYPE_DWORD10	75
-		DispAutoSizeFlag	TYPE_BOOL	TRUE
-		DispMacroFlag	TYPE_BOOL	FALSE
-		DispSizeSpecify	TYPE_BOOL	FALSE
-		DispDevCommentLine	TYPE_DWORD10	4
-		DispLdrMonDevData	TYPE_BOOL	TRUE
-		DispLdrMonDevDataAuto	TYPE_BOOL	FALSE
-	Window016:
+	Window010:
 		DataName	TYPE_STRING	"Cross reference"
 		WindowType	TYPE_DWORD10	304
 		SearchOption	TYPE_BOOL	FALSE
